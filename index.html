@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>verification form html pattern + JS regex (NL postcode)</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta charset=utf-8 />
+
+<form class="contact_form" id="contact_form" action="" method="post" name="contact_form">
+
+  <ul>
+    <li>
+      <h2>Contact Us</h2>
+      <span class="required_notification">* Required Field</span>
+    </li>
+    <li>
+      <label for="name">Name:</label>
+      <input type="text" name="name" placeholder="John" required />
+    </li>
+    <li>
+      <label for="email">Email:</label>
+      <input type="email" name="email" placeholder="john@example.com" required />
+      <span class="form_hint">Proper format "name@something.com"</span>
+      <span class="msg error">Invalid e-mail address!</span>
+<span class="msg success">Valid e-mail address</span>
+    </li>
+    <li>
+      <label for="adress">Adress:</label>
+      <input type="text" name="adress" placeholder="Badrianhof" required />
+      <span class="form_hint">Proper format "Badrianhof"</span>
+    </li>
+    <li>
+      <label for="houseNumber">House Number:</label>
+      <input type="number" name="houseNumber" placeholder="5" min="0" step="1" required />
+      <span class="form_hint">Proper format "5"</span>
+      <input type="text" name="houseNumberAdd" />
+    </li>
+    <li>
+      <label for="postcode">Postcode:</label>
+      <input type="text" name="postcode" placeholder="1234AA" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" required />
+      <span class="form_hint">Proper format "1234AA"</span>
+      <span class="form_hint">Proper format "1234AA or 1234 AA"</span>
+      <span class="msg error">Invalid postcode!</span>
+    </li>
+    <li>
+      <label for="city">City:</label>
+      <input type="text" name="city" placeholder="Amsterdam" required />
+      <span class="form_hint">Proper format "Amsterdam"</span>
+    </li>
+    <li>
+      <button class="submit" type="submit">Submit Form</button>
+    </li>
+
+  </ul>
+
+</form>
+    
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
